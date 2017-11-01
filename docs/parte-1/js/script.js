@@ -19,6 +19,9 @@ const startForm = {
             const email = startForm.ui.inputs.email;
             const message = startForm.ui.inputs.message;
 
+            const nameRegex = /[a-zA-Z\-'\s]+/;
+            const emailRegex = /^[A-z0-9\.\-]{1,}\@\w+\.[A-z]{2,3}(\.[a-z]{2})?$/;
+            const msgRegex = /.*\S.*/;
 
             fields.forEach( field => {
                 field.value.length === 0 ? button.disabled = true : button.disabled = false;
