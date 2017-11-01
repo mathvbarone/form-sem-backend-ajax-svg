@@ -13,6 +13,12 @@ const startForm = {
     // FUNCTIONS
     functions: {
         formValidation: () => {
+            //VARIÁVEIS UI PATH
+            const name = startForm.ui.inputs.name;
+            const email = startForm.ui.inputs.email;
+            const message = startForm.ui.inputs.message;
+            const input =  startForm.ui.fields;
+            const button = startForm.ui.button;
         }
     },
 
