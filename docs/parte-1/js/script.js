@@ -28,6 +28,7 @@ const startForm = {
             //ERROS
             let erros = 0;
 
+            // REGEX VALIDATION
             const regexValidation = (regexValue, input) => {
                 if(regexValue.test(input.value)){
                     input.classList.remove("is-danger");
