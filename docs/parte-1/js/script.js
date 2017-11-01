@@ -17,8 +17,33 @@ const startForm = {
             const name = startForm.ui.inputs.name;
             const email = startForm.ui.inputs.email;
             const message = startForm.ui.inputs.message;
-            const input =  startForm.ui.fields;
+            const fields =  startForm.ui.fields;
             const button = startForm.ui.button;
+
+            //REGEX
+            const nameRegex = /[a-zA-Z\-'\s]+/;
+            const emailRegex = /^[A-z0-9\.\-]{1,}\@\w+\.[A-z]{2,3}(\.[a-z]{2})?$/;
+            const msgRegex = /.*\S.*/;
+
+            let erros = 0;
+
+            const regexValidation = (regexValue, input) => {
+                if(regexValue.test(input.value)){
+                    input.classList.remove("is-danger");
+                    input.nextElementSibling.classList.add("is-hidden");
+                }else{
+                    input.classList.add("is-danger");
+                    input.nextElementSibling.classList.remove("is-hidden");
+                    erros++
+                }
+            };
+
+            regexValidation(nameRegex, name);
+            regexValidation(emailRegex, email);
+            regexValidation(msgRegex, message);
+
+            erros === 0 ? button.disabled = false : button.disabled = true;
+
         }
     },
 
