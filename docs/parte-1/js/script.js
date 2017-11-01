@@ -50,6 +50,12 @@ const startForm = {
     //EVENTS
     events: {
         init: () => {
+            const initUi =  startForm.ui;
+            const initFunctions =  startForm.functions;
+
+            initUi.fields.forEach( field => {
+                field.addEventListener("input", initFunctions.formValidation);
+            });
         }
     }
 };
