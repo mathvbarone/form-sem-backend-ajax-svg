@@ -8,19 +8,19 @@ Passos para baixar o boiterplate:
 1. Clone o repositório
 
 ```
-git clone https://github.com/mathvbarone/tutorial-form-sem-backend-ajax-svg.git
+$git clone https://github.com/mathvbarone/tutorial-form-sem-backend-ajax-svg.git
 ```
 
 2. Instale os pacotes node
 
 ```
-npm install
+$npm install
 ```
 
 3. Inicie o servidor (Quando você salvar o código, ele atualiza sozinho :))
 
 ```
-live-server
+$live-server
 ```
 
 4. Abaixo o link referente à cada parte do tutorial:
