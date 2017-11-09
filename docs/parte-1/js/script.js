@@ -1,64 +1,45 @@
-const startForm = {
-    // UI DECLARATION
-    ui: {
-        fields: document.querySelectorAll(".input-field"),
-        inputs: {
-            name: document.querySelector(".name"),
-            email: document.querySelector(".email"),
-            message: document.querySelector(".message")
-        },
-        button: document.querySelector(".button"),
-    },
+(() => {
+  // DECLARANDO AS VARIÁVEIS REFERENTES À INTERFACE
+  const fields = document.querySelectorAll(".input-field");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  const submitButton = document.getElementById("submit-button");
 
-    // FUNCTIONS
-    functions: {
-        formValidation: () => {
-            //VARIÁVEIS UI PATH
-            const name = startForm.ui.inputs.name;
-            const email = startForm.ui.inputs.email;
-            const message = startForm.ui.inputs.message;
-            const fields =  startForm.ui.fields;
-            const button = startForm.ui.button;
+  // FUNÇÃO DE VALIDAÇÃO DO FORM
+  const validateForm = () => {
+    const nameRegexp = /[a-zA-Z\-'\s]+/;
+    const emailRegexp = /^[A-z0-9.-]{1,}@\w+\.[A-z]{2,3}(\.[a-z]{2})?$/;
+    const msgRegexp = /.*\S.*/;
 
-            //REGEX
-            const nameRegex = /[a-zA-Z\-'\s]+/;
-            const emailRegex = /^[A-z0-9\.\-]{1,}\@\w+\.[A-z]{2,3}(\.[a-z]{2})?$/;
-            const msgRegex = /.*\S.*/;
+    submitButton.disabled = false;
 
-            let erros = 0;
+    // FUNÇÃO DE VALIDAÇÃO DO CAMPO
+    const validateField = (regExp, field) => {
+      if (regExp.test(field.value)) {
+        field.classList.remove("is-danger");
+        field.nextElementSibling.classList.add("is-hidden");
+      } else {
+        field.classList.add("is-danger");
+        field.nextElementSibling.classList.remove("is-hidden");
+        submitButton.disabled = true;
+      }
+    };
 
-            const regexValidation = (regexValue, input) => {
-                if(regexValue.test(input.value)){
-                    input.classList.remove("is-danger");
-                    input.nextElementSibling.classList.add("is-hidden");
-                }else{
-                    input.classList.add("is-danger");
-                    input.nextElementSibling.classList.remove("is-hidden");
-                    erros++
-                }
-            };
+    validateField(nameRegexp, nameInput);
+    validateField(emailRegexp, emailInput);
+    validateField(msgRegexp, messageInput);
+  };
 
-            regexValidation(nameRegex, name);
-            regexValidation(emailRegex, email);
-            regexValidation(msgRegex, message);
+  // FUNÇÃO DE INICIALIZAÇÃO
+  const init = () => {
+    fields.forEach((field) => {
+      field.addEventListener("input", validateForm);
+    });
+    submitButton.addEventListener("click", (evnt) => {
+      evnt.preventDefault();
+    });
+  };
 
-            erros === 0 ? button.disabled = false : button.disabled = true;
-
-        }
-    },
-
-    //EVENTS
-    events: {
-        init: () => {
-            const initUi =  startForm.ui;
-            const initFunctions =  startForm.functions;
-
-            initUi.fields.forEach( field => {
-                field.addEventListener("input", initFunctions.formValidation);
-            });
-        }
-    }
-};
-
-//INIT FUNCTION
-startForm.events.init();
+  init();
+})();
