@@ -21,7 +21,7 @@ $ npm install
 $ live-server
 ```
 
-4. Abaixo o link referente à cada parte do tutorial:
+4. Abaixo os links referente à cada parte do tutorial:
 
 - Parte 1 - Validação de formulário com Expressões Regulares
   - [Código fonte](http://matheusbarone.com/tutorial-form-sem-backend-ajax-svg/parte-1/) | Tutorial
