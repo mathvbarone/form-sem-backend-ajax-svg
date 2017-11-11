@@ -1,7 +1,5 @@
 ## Envio de formulário sem BackEnd
 
-### Com AJAX, SVG, e RegExp Validation
-
 
 - Parte 1 - Validação de formulário com Expressões Regulares
   - [Código fonte](http://matheusbarone.com/tutorial-form-sem-backend-ajax-svg/parte-1/) | Tutorial
@@ -11,6 +9,7 @@
   
 - Parte 3 - Estilização das mensagens de envio utilizando animações SVG
   - [Código fonte](http://matheusbarone.com/tutorial-form-sem-backend-ajax-svg/parte-3/) | Tutorial
+  
 
 
 Passos para baixar o boiterplate:
