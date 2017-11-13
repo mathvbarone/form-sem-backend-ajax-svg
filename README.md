@@ -29,7 +29,7 @@ $ live-server
 ### Acompanhe todas as partes do tutorial:
 
 - Parte 1 - Validação de formulário com Expressões Regulares
-  - [Código fonte](http://matheusbarone.com/tutorial-form-sem-backend-ajax-svg/parte-1/) | Tutorial
+  - [Código fonte](http://matheusbarone.com/form-site-estatico-regexp) | Tutorial
 
 - Parte 2 - Envio do formulário via AJAX
   - [Código fonte](http://matheusbarone.com/tutorial-form-sem-backend-ajax-svg/parte-2/) | Tutorial
