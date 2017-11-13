@@ -20,7 +20,7 @@ $ cd tutorial-form-para-sites-estaticos
 $ npm install
 ```
 
-#### 4. Inicie o servidor (Quando você salvar o código, ele atualiza sozinho :))
+#### 4. Inicie o servidor (Quando você salvar o código, ele atualiza sozinho :D)
 
 ```
 $ live-server
@@ -29,7 +29,7 @@ $ live-server
 ### Acompanhe todas as partes do tutorial:
 
 - Parte 1 - Validação de formulário com Expressões Regulares
-  - [Código fonte](http://matheusbarone.com/form-site-estatico-regexp) | Tutorial
+  - [Código fonte](http://matheusbarone.com/form-site-estatico-regexp) | [Tutorial](http://matheusbarone.com/form-site-estatico-regexp/)
 
 - Parte 2 - Envio do formulário via AJAX
   - [Código fonte](http://matheusbarone.com/tutorial-form-sem-backend-ajax-svg/parte-2/) | Tutorial
