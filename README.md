@@ -5,7 +5,7 @@ Passos para baixar o boiterplate:
 #### 1. Clone o repositório
 
 ```
-$ git clone https://github.com/mathvbarone/tutorial-form-sem-backend-ajax-svg.git
+$ git clone https://github.com/mathvbarone/tutorial-form-para-sites-estaticos
 ```
 
 #### 2. Acesse a pasta do tutorial
