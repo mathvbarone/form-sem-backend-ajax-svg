@@ -29,15 +29,9 @@
       }
     };
 
-    const regExpAndFieldArray = [
-      { regExp: nameRegexp, field: nameInput },
-      { regExp: emailRegexp, field: emailInput },
-      { regExp: msgRegexp, field: messageInput },
-    ];
-
-    regExpAndFieldArray.forEach((regExpAndField) => {
-      validateField(regExpAndField.regExp, regExpAndField.field);
-    });
+      validateField(nameRegexp, nameInput);
+      validateField(emailRegexp, emailInput);
+      validateField(msgRegexp, messageInput);
   };
 
 
