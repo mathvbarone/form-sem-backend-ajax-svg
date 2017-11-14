@@ -1,10 +1,13 @@
 (() => {
   // DECLARANDO AS VARIÁVEIS REFERENTES À INTERFACE
+  const container = document.querySelector(".container");
+  const form = document.querySelector(".form");
   const fields = document.querySelectorAll(".input-field");
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const messageInput = document.getElementById("message");
-  const submitButton = document.getElementById("submit-button");
+  const nameInput = document.querySelector("#name");
+  const emailInput = document.querySelector("#email");
+  const messageInput = document.querySelector("#message");
+  const submitButton = document.querySelector("#submit-button");
+
 
   // FUNÇÃO DE VALIDAÇÃO DO FORM
   const validateForm = () => {
@@ -26,16 +29,22 @@
       }
     };
 
-    validateField(nameRegexp, nameInput);
-    validateField(emailRegexp, emailInput);
-    validateField(msgRegexp, messageInput);
+    const regExpAndFieldArray = [
+      { regExp: nameRegexp, field: nameInput },
+      { regExp: emailRegexp, field: emailInput },
+      { regExp: msgRegexp, field: messageInput },
+    ];
+
+    regExpAndFieldArray.forEach((regExpAndField) => {
+      validateField(regExpAndField.regExp, regExpAndField.field);
+    });
   };
+
 
   // FUNÇÃO DE INICIALIZAÇÃO
   const init = () => {
-    fields.forEach((field) => {
-      field.addEventListener("input", validateForm);
-    });
+    fields.forEach(field => field.addEventListener("input", validateForm));
+
     submitButton.addEventListener("click", (evnt) => {
       evnt.preventDefault();
     });
